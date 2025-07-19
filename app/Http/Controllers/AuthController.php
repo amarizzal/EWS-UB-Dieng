@@ -17,7 +17,7 @@ class AuthController extends Controller
         $credentials = $request->only('username', 'password');
 
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('/dashboard')->with('welcome', 'Selamat datang kembali!');;
+            return redirect()->intended('/admin/dashboard')->with('welcome', 'Selamat datang kembali!');;
         }
 
         return back()->withErrors([
