@@ -84,15 +84,15 @@
                       <label class="custom-control-label" for="score_1_3">9 - 17</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="score_1" id="score_1_4" value="1">
+                      <input class="form-check-input" type="radio" name="score_1" id="score_1_4" value="-1">
                       <label class="custom-control-label" for="score_1_4">18 - 20</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="score_1" id="score_1_5" value="2">
+                      <input class="form-check-input" type="radio" name="score_1" id="score_1_5" value="-2">
                       <label class="custom-control-label" for="score_1_5">21 - 29</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="score_1" id="score_1_6" value="3">
+                      <input class="form-check-input" type="radio" name="score_1" id="score_1_6" value="-3">
                       <label class="custom-control-label" for="score_1_6">>= 30</label>
                     </div>
                   </div>
@@ -112,15 +112,15 @@
                       <label class="custom-control-label" for="score_2_3">51 - 100</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="score_2" id="score_2_4" value="1">
+                      <input class="form-check-input" type="radio" name="score_2" id="score_2_4" value="-1">
                       <label class="custom-control-label" for="score_2_4">101 - 110</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="score_2" id="score_2_5" value="2">
+                      <input class="form-check-input" type="radio" name="score_2" id="score_2_5" value="-2">
                       <label class="custom-control-label" for="score_2_5">111 - 129</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="score_2" id="score_2_6" value="3">
+                      <input class="form-check-input" type="radio" name="score_2" id="score_2_6" value="-3">
                       <label class="custom-control-label" for="score_2_6">>= 130</label>
                     </div>
 
@@ -149,11 +149,11 @@
                       <label class="custom-control-label" for="score_3_5">160 - 199</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="score_3" id="score_3_6" value="2">
+                      <input class="form-check-input" type="radio" name="score_3" id="score_3_6" value="-2">
                       <label class="custom-control-label" for="score_3_6">200 - 220</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="score_3" id="score_3_7" value="3">
+                      <input class="form-check-input" type="radio" name="score_3" id="score_3_7" value="-3">
                       <label class="custom-control-label" for="score_3_7">>= 220</label>
                     </div>
                   </div>
@@ -177,11 +177,11 @@
                       <label class="custom-control-label" for="score_4_4">Sadar Penuh (Composmentis)</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="score_4" id="score_4_5" value="1">
+                      <input class="form-check-input" type="radio" name="score_4" id="score_4_5" value="-1">
                       <label class="custom-control-label" for="score_4_5">Gelisah atau bingung (Apatis)</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="score_4" id="score_4_6" value="2">
+                      <input class="form-check-input" type="radio" name="score_4" id="score_4_6" value="-2">
                       <label class="custom-control-label" for="score_4_6">Gelisah atau bingung baru terjadi (Apatis)</label>
                     </div>
                   </div>
@@ -201,11 +201,11 @@
                       <label class="custom-control-label" for="score_5_4">36 C - 38 C</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="score_5" id="score_5_5" value="1">
+                      <input class="form-check-input" type="radio" name="score_5" id="score_5_5" value="-1">
                       <label class="custom-control-label" for="score_5_5">38 C - 38.5 C</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="score_5" id="score_5_6" value="2">
+                      <input class="form-check-input" type="radio" name="score_5" id="score_5_6" value="-2">
                       <label class="custom-control-label" for="score_5_6">>= 38.5 C</label>
                     </div>
                   </div>

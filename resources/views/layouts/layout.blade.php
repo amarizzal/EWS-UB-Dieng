@@ -32,6 +32,7 @@
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <!-- CSS Files -->
   <link id="pagestyle" href="{{ asset('css/argon-dashboard.css?v=2.1.0') }}" rel="stylesheet" />
+  @yield('styles')
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -53,6 +54,14 @@
               <i class="ni ni-tv-2 text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ request()->routeIs('record.index') ? 'active' : '' }}" href="{{ route('record.index') }}">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-bullet-list-67 text-dark text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">EWS Record</span>
           </a>
         </li>
         {{-- <li class="nav-item">
