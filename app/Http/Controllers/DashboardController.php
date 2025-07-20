@@ -34,6 +34,6 @@ class DashboardController extends Controller
             'user_id' => auth()->user()->id,
         ]);
 
-        return redirect()->route('dashboard')->with('success', 'EWS record created successfully');
+        return redirect()->route('dashboard')->with('success', 'EWS record created successfully')->with('ews', $ews);
     }
 }
