@@ -11,4 +11,9 @@ class RecordController extends Controller
         $ewsRecords = EwsRecord::orderBy('created_at', 'desc')->with('user')->get();
         return view('record.index', compact('ewsRecords'));
     }
+
+    public function destroy(EwsRecord $record) {
+        $record->delete();
+        return redirect()->route('record.index')->with('success', 'Data berhasil dihapus');
+    }
 }
