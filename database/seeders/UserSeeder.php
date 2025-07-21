@@ -12,16 +12,19 @@ class UserSeeder extends Seeder
     {
         $users = [
             [
+                'id' => 1,
                 'name' => 'Admin User',
                 'username' => 'admin',
                 'password' => Hash::make('admin12345'),
             ],
             [
+                'id' => 2,
                 'name' => 'Manager User',
                 'username' => 'manager',
                 'password' => Hash::make('manager12345'),
             ],
             [
+                'id' => 3,
                 'name' => 'Staff User',
                 'username' => 'staff',
                 'password' => Hash::make('staff12345'),
