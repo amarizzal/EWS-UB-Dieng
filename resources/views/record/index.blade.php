@@ -127,7 +127,7 @@
                             $color_code = '';
                             $target = '';
                             $score_total = abs($ewsRecord->score_1) + abs($ewsRecord->score_2) + abs($ewsRecord->score_3) + abs($ewsRecord->score_4) + abs($ewsRecord->score_5);
-                            if($score_total > 0 && $score_total <= 1) {
+                            if($score_total >= 0 && $score_total <= 1) {
                               $color_code = 'bg-success';
                               $target = 'hijau';
                             } else if($score_total > 1 && $score_total <= 3) {
