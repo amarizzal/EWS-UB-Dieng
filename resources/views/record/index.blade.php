@@ -95,6 +95,7 @@
                   <table class="table align-items-center mb-0" id="table">
                     <thead>
                       <tr>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tanggal</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama & No. Rekam Medis</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Total Skor</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Pelapor</th>
@@ -110,6 +111,11 @@
                     <tbody>
                       @foreach($ewsRecords as $ewsRecord)
                       <tr>
+                        <td class="align-middle">
+                          <div class="d-flex flex-column ms-3">
+                            <h6 class="mb-0 text-sm text-secondary">{{ $ewsRecord->created_at->format('d-m-Y H:i') }}</h6>
+                          </div>
+                        </td>
                         <td class="align-middle">
                           <div class="d-flex flex-column ms-3">
                             <span class="text-primary text-lg font-weight-bold">{{ $ewsRecord->name }}</span>
