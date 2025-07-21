@@ -283,7 +283,7 @@
 
                           <!-- Link-style delete using a tag -->
                           <a href="#" class="text-danger ms-3 font-weight-bold text-xs"
-                              onclick="event.preventDefault(); if (confirm('Are you sure you want to delete this schedule?')) { document.getElementById('delete-form{{$ewsRecord->id}}').submit(); }">
+                              onclick="event.preventDefault(); if (confirm('Are you sure you want to delete this record?')) { document.getElementById('delete-form{{$ewsRecord->id}}').submit(); }">
                               Hapus
                           </a>
 
