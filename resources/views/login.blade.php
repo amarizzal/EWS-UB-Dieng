@@ -73,7 +73,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href=" {{ route('login')}} ">
+                  <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href=" {{ route('about')}} ">
                     <i class="fa fa-chart-pie opacity-6 text-dark me-1"></i>
                     About
                   </a>
