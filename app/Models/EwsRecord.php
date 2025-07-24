@@ -10,11 +10,13 @@ class EwsRecord extends Model
     protected $fillable = [
         'name', 
         'medic_number',
+        'room',
         'score_1',
         'score_2',
         'score_3',
         'score_4',
         'score_5',
+        'score_6',
         'score_total',
         'category',
         'user_id',

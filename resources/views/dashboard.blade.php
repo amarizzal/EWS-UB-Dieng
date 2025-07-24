@@ -89,13 +89,17 @@
               <form method="POST" action="{{ route('dashboard.store') }}">
                 @csrf 
                 <div class="row">
-                  <div class="form-group col-md-6">
+                  <div class="form-group col-md-4">
                     <label for="name">Nama</label>
                     <input type="text" name="name" class="form-control" value="@if(session('ews')){{ session('ews')->name }}@endif" id="name" placeholder="nama pasien" required @if(session('ews')) readonly @endif>
                   </div>
-                  <div class="form-group col-md-6">
+                  <div class="form-group col-md-4">
                     <label for="medic_number">No. Rekam Medis</label>
                     <input type="number" name="medic_number" class="form-control" value="@if(session('ews')){{ session('ews')->medic_number }}@endif" id="medic_number" placeholder="no. rekam medis" required @if(session('ews')) readonly @endif>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="room">Ruang Dirawat</label>
+                    <input type="text" name="room" class="form-control" value="@if(session('ews')){{ session('ews')->room }}@endif" id="room" placeholder="ruang dirawat" required @if(session('ews')) readonly @endif>
                   </div>
 
                   <div class="form-group col-md-4 border-end">
@@ -238,13 +242,33 @@
                       <label class="custom-control-label" for="score_5_6">>= 38.5 C</label>
                     </div>
                   </div>
+
+                  <div class="form-group col-md-4 border-end">
+                    <label for="score_1">SpO2 Scale 1 (%)</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="score_6" id="score_6_2" value="3" @if(session('ews')) {{ session('ews')->score_6 == 2 ? 'checked' : '' }} @endif>
+                      <label class="custom-control-label" for="score_6_2"><= 91</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="score_6" id="score_6_3" value="2" @if(session('ews')) {{ session('ews')->score_6 == 1 ? 'checked' : '' }} @endif>
+                      <label class="custom-control-label" for="score_6_3">92 - 93</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="score_6" id="score_6_4" value="1" @if(session('ews')) {{ session('ews')->score_6 == 0 ? 'checked' : '' }} @endif>
+                      <label class="custom-control-label" for="score_6_4">94 - 95</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="score_6" id="score_6_5" value="0" @if(session('ews')) {{ session('ews')->score_6 == -1 ? 'checked' : '' }} @endif>
+                      <label class="custom-control-label" for="score_6_5">>= 96</label>
+                    </div>
+                  </div>
                 </div>
 
                 @if(session('ews'))
                 @php
                   $color_code = '';
                   $target = '';
-                  $score_total = abs(session('ews')->score_1) + abs(session('ews')->score_2) + abs(session('ews')->score_3) + abs(session('ews')->score_4) + abs(session('ews')->score_5);
+                  $score_total = abs(session('ews')->score_1) + abs(session('ews')->score_2) + abs(session('ews')->score_3) + abs(session('ews')->score_4) + abs(session('ews')->score_5) + abs(session('ews')->score_6);
                   if($score_total > 0 && $score_total <= 1) {
                     $color_code = 'bg-success';
                     $target = 'hijau';

@@ -26,11 +26,13 @@ class DashboardController extends Controller
         $ews = EwsRecord::create([
             'name' => $request->name,
             'medic_number' => $request->medic_number,
+            'room' => $request->room,
             'score_1' => $request->score_1,
             'score_2' => $request->score_2,
             'score_3' => $request->score_3,
             'score_4' => $request->score_4,
             'score_5' => $request->score_5,
+            'score_6' => $request->score_6,
             'user_id' => auth()->user()->id,
         ]);
 

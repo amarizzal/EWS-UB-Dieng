@@ -96,7 +96,7 @@
                     <thead>
                       <tr>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tanggal</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama & No. Rekam Medis</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama, No. Rekam Medis, Ruang Dirawat</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Total Skor</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Pelapor</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Pernapasan</th>
@@ -104,6 +104,7 @@
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tekanan Sistolik</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tingkat Kesadaran</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Suhu Tubuh</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">SpO2 Scale 1 (%)</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"></th>
                         <th class="text-secondary opacity-7"></th>
                       </tr>
@@ -120,13 +121,14 @@
                           <div class="d-flex flex-column ms-3">
                             <span class="text-primary text-lg font-weight-bold">{{ $ewsRecord->name }}</span>
                             <h6 class="mb-0 text-sm text-secondary">{{ $ewsRecord->medic_number }}</h6>
+                            <h6 class="mb-0 text-sm text-success">{{ $ewsRecord->room ?? '-' }}</h6>
                           </div>
                         </td>
                         <td>
                           @php
                             $color_code = '';
                             $target = '';
-                            $score_total = abs($ewsRecord->score_1) + abs($ewsRecord->score_2) + abs($ewsRecord->score_3) + abs($ewsRecord->score_4) + abs($ewsRecord->score_5);
+                            $score_total = abs($ewsRecord->score_1) + abs($ewsRecord->score_2) + abs($ewsRecord->score_3) + abs($ewsRecord->score_4) + abs($ewsRecord->score_5) + abs($ewsRecord->score_6);
                             if($score_total >= 0 && $score_total <= 1) {
                               $color_code = 'bg-success';
                               $target = 'hijau';
@@ -274,8 +276,26 @@
                             </div>
                           </div>
                         </td>
-                        
-
+                        <td class="align-middle">
+                          <div class="d-flex px-0 py-1">
+                            <div class="d-flex flex-column justify-content-center mx-auto">
+                              <h6 class="mb-0 text-sm">
+                                @if($ewsRecord->score_6 == 3)
+                                  < 91
+                                @elseif($ewsRecord->score_6 == 2)
+                                  91-93
+                                @elseif($ewsRecord->score_6 == 1)
+                                  94-95
+                                @elseif($ewsRecord->score_6 == 0)
+                                  >= 96
+                                @endif
+                              </h6>
+                              <h6 class="mb-0 text-sm text-center text-primary">
+                                ({{ abs($ewsRecord->score_6 )}})
+                              </h6>
+                            </div>
+                          </div>
+                        </td>
                         <td class="align-middle">
                           {{-- <a href="{{ route('record.show', $ewsRecord) }}" class="text-warning font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                             Detail
