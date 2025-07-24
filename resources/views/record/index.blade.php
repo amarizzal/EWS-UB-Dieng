@@ -274,7 +274,7 @@
                             <div class="d-flex flex-column justify-content-center mx-auto">
                               <h6 class="mb-0 text-sm">
                                 @if($ewsRecord->score_6 == 3)
-                                  < 91
+                                  <= 91
                                 @elseif($ewsRecord->score_6 == 2)
                                   91-93
                                 @elseif($ewsRecord->score_6 == 1)
