@@ -73,14 +73,7 @@
                   <h6>Daftar EWS Record</h6>
                 </div>
                 <div class="col-md-4 col-12 d-flex align-items-end ms-auto">
-                  <select name="filter" id="filter" class="form-control d-inline-block ml-3">
-                    <option value="" selected disabled>Filter Kategori</option>
-                    <option value="all">Semua</option>
-                    <option value="hijau">Hijau</option>
-                    <option value="kuning">Kuning</option>
-                    <option value="orange">Oranye</option>
-                    <option value="merah">Merah</option>
-                  </select>
+                  <input type="text" name="search" id="search" class="form-control d-inline-block ml-3" placeholder="Cari nama, no. rekam medis, ruang dirawat">
                 </div>
               </div>
             </div>
@@ -119,9 +112,9 @@
                         </td>
                         <td class="align-middle">
                           <div class="d-flex flex-column ms-3">
-                            <span class="text-primary text-lg font-weight-bold">{{ $ewsRecord->name }}</span>
-                            <h6 class="mb-0 text-sm text-secondary">{{ $ewsRecord->medic_number }}</h6>
-                            <h6 class="mb-0 text-sm text-success">{{ $ewsRecord->room ?? '-' }}</h6>
+                            <span class="text-primary text-lg font-weight-bold name">{{ $ewsRecord->name }}</span>
+                            <h6 class="mb-0 text-sm text-secondary medic">{{ $ewsRecord->medic_number }}</h6>
+                            <h6 class="mb-0 text-sm text-success room">{{ $ewsRecord->room ?? '-' }}</h6>
                           </div>
                         </td>
                         <td>
@@ -491,54 +484,74 @@
     document.addEventListener('DOMContentLoaded', function () {
       
 
-      // Filter table
-      const filter = document.getElementById('filter');
-      filter.addEventListener('change', function() {
-        const value = filter.value;
+      // Filter table by search name, room, and medic number
+      const search = document.getElementById('search');
+      search.addEventListener('input', function() {
+        const value = search.value;
         table.querySelectorAll('tbody tr').forEach(tr => {
-          const scoreCell = tr.querySelector('.score-total');
-          if (!scoreCell) return;
-          const score = scoreCell.textContent.trim();
-
-          if (value === 'all') {
+          const nameCell = tr.querySelector('.name');
+          const roomCell = tr.querySelector('.room');
+          const medicCell = tr.querySelector('.medic');
+          if (!nameCell || !roomCell || !medicCell) return;
+          const name = nameCell.textContent.trim();
+          const room = roomCell.textContent.trim();
+          const medic = medicCell.textContent.trim();
+          if (name.includes(value) || room.includes(value) || medic.includes(value)) {
             tr.style.display = 'table-row';
-          } else if(value === 'hijau') {
-            if(score > 0 && score <= 1) {
-              tr.style.display = 'table-row';
-            } else {
-              tr.style.display = 'none';
-            }
-          } else if(value === 'kuning') {
-            if(score > 1 && score <= 3) {
-              tr.style.display = 'table-row';
-            } else { 
-              tr.style.display = 'none';
-            }
-          } else if(value === 'orange') {
-            if(score > 3 && score <= 5) {
-              tr.style.display = 'table-row';
-            } else {
-              tr.style.display = 'none'; 
-            }
-          } else if(value === 'merah') {
-            if(score > 5 ) {
-              tr.style.display = 'table-row';
-            } else {
-              tr.style.display = 'none'; 
-            }
+          } else {
+            tr.style.display = 'none';
           }
-
-          // if(score > 0 && score <= 1) {
-          //   tr.style.display = 'table-row';
-          // } else if(score > 1 && score <= 3) {
-          //   tr.style.display = 'table-row';
-          // } else if(score > 3 && score <= 5) {
-          //   tr.style.display = 'table-row';
-          // } else if(score > 5 ) {
-          //   tr.style.display = 'table-row';
-          // }
         });
       });
+
+      // Filter table by score total
+      // const filter = document.getElementById('filter');
+      // filter.addEventListener('change', function() {
+      //   const value = filter.value;
+      //   table.querySelectorAll('tbody tr').forEach(tr => {
+      //     const scoreCell = tr.querySelector('.score-total');
+      //     if (!scoreCell) return;
+      //     const score = scoreCell.textContent.trim();
+
+      //     if (value === 'all') {
+      //       tr.style.display = 'table-row';
+      //     } else if(value === 'hijau') {
+      //       if(score > 0 && score <= 1) {
+      //         tr.style.display = 'table-row';
+      //       } else {
+      //         tr.style.display = 'none';
+      //       }
+      //     } else if(value === 'kuning') {
+      //       if(score > 1 && score <= 3) {
+      //         tr.style.display = 'table-row';
+      //       } else { 
+      //         tr.style.display = 'none';
+      //       }
+      //     } else if(value === 'orange') {
+      //       if(score > 3 && score <= 5) {
+      //         tr.style.display = 'table-row';
+      //       } else {
+      //         tr.style.display = 'none'; 
+      //       }
+      //     } else if(value === 'merah') {
+      //       if(score > 5 ) {
+      //         tr.style.display = 'table-row';
+      //       } else {
+      //         tr.style.display = 'none'; 
+      //       }
+      //     }
+
+      //     // if(score > 0 && score <= 1) {
+      //     //   tr.style.display = 'table-row';
+      //     // } else if(score > 1 && score <= 3) {
+      //     //   tr.style.display = 'table-row';
+      //     // } else if(score > 3 && score <= 5) {
+      //     //   tr.style.display = 'table-row';
+      //     // } else if(score > 5 ) {
+      //     //   tr.style.display = 'table-row';
+      //     // }
+      //   });
+      // });
     });
 </script>
 @endsection
