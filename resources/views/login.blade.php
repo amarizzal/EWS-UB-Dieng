@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="{{asset('img/apple-icon.png')}}">
   <link rel="icon" type="image/png" href="{{asset('img/logo.webp')}}">
   <title>
-    EWS RSSA UB
+    EWS RSSA FIKES UB - Ruang Bunaken
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -42,7 +42,7 @@
         <nav class="navbar navbar-expand-lg blur border-radius-lg top-0 z-index-3 shadow position-absolute mt-4 py-2 start-0 end-0 mx-4">
           <div class="container-fluid">
             <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="../pages/dashboard.html">
-              EWS RSSA UB
+              EWS RSSA FIKES UB - Ruang Bunaken
             </a>
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon mt-2">
@@ -133,9 +133,10 @@
             <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
               <div class="position-relative h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('{{ asset('img/bg-primary.jpg')}}'); background-size: cover; background-position: center;">
               <span class="mask bg-gradient-dark opacity-6"></span>
-              <img src="{{ asset('img/logo.webp') }}" alt="EWS RSSA UB Logo" class="mx-auto" style="max-width: 120px; position: relative; z-index: 2;">
-              <h3 class="mt-5 text-white font-weight-bolder position-relative">EWS RSSA UB</h3>
-              <p class="text-white position-relative">Sign in untuk merekam data ews</p>
+              <img src="{{ asset('img/logo.webp') }}" alt="EWS RSSA FIKES UB Logo" class="mx-auto" style="max-width: 120px; position: relative; z-index: 2;">
+              <h3 class="mt-5 text-white font-weight-bolder position-relative">EWS RSSA FIKES UB</h3>
+              <h5 class="text-white position-relative">"Ruang Bunaken"</h5>
+              <p class="mt-4 text-white position-relative">Sign in untuk merekam data ews</p>
               </div>
             </div>
           </div>

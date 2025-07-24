@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="{{asset('img/logo.png')}}">
   <title>
-    EWS RSSA UB
+    EWS RSSA FIKES UB - Ruang Bunaken
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -45,7 +45,7 @@
   <nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3 navbar-transparent mt-4">
     <div class="container">
       <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 text-white" href="{{ route('login')}}">
-        EWS RSSA UB
+        EWS RSSA FIKES UB - Ruang Bunaken
       </a>
       <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon mt-2">
@@ -86,8 +86,9 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-5 text-center mx-auto">
-            <h1 class="text-white mb-2 mt-5">EWS RSSA UB</h1>
-            <p class="text-lead text-white">Project EWS RSSA UB dibangun untuk memudahkan pengguna dalam merekam data EWS pasien. Project ini dikembangkan oleh Tim RSSA UB di bawah ini.</p>
+            <h1 class="text-white mb-2 mt-5">EWS RSSA FIKES UB</h1>
+            <h4 class="text-white position-relative">"Ruang Bunaken"</h4>
+            <p class="text-lead text-white mt-4">Project EWS RSSA FIKES UB dibangun untuk memudahkan pengguna dalam merekam data EWS pasien. Project ini dikembangkan oleh Tim RSSA UB di bawah ini.</p>
           </div>
         </div>
       </div>
