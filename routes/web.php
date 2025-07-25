@@ -23,10 +23,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::post('/input-data', [DashboardController::class, 'store'])->name('dashboard.store');
     Route::group(['prefix' => 'record'], function () {
         Route::get('/', [RecordController::class, 'index'])->name('record.index');
-        Route::post('/', [RecordController::class, 'store'])->name('record.store');
-        Route::get('/{record}', [RecordController::class, 'show'])->name('record.show');
-        Route::put('/{record}', [RecordController::class, 'update'])->name('record.update');
+        Route::post('/', [RecordController::class, 'store'])->name('record.store');;
         Route::delete('/{record}', [RecordController::class, 'destroy'])->name('record.destroy');
+        Route::get('/export', [RecordController::class, 'export'])->name('record.export');
     });
     Route::group(['prefix' => 'user'], function () {
         Route::get('/', [UserController::class, 'index'])->name('user.index');

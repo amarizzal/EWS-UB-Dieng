@@ -72,8 +72,11 @@
                 <div class="col-auto">
                   <h6>Daftar EWS Record</h6>
                 </div>
-                <div class="col-md-4 col-12 d-flex align-items-end ms-auto">
+                <div class="col-md-4 col-12 d-flex align-items-center ms-auto">
                   <input type="text" name="search" id="search" class="form-control d-inline-block ml-3" placeholder="Cari nama, no. rekam medis, ruang dirawat">
+                </div>
+                <div class="col-auto">
+                  <a href="{{ route('record.export') }}" class="btn btn-success my-auto"><i class="ni ni-single-copy-04"></i> Export Excel</a>
                 </div>
               </div>
             </div>
