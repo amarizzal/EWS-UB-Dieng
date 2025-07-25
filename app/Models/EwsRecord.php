@@ -20,6 +20,7 @@ class EwsRecord extends Model
         'score_total',
         'category',
         'user_id',
+        'note',
         'created_at',
         'updated_at'
     ];

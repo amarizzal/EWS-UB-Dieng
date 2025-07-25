@@ -21,6 +21,8 @@ class DashboardController extends Controller
             'score_3' => 'required',
             'score_4' => 'required',
             'score_5' => 'required',
+            'score_6' => 'required',
+            'note' => 'nullable',
         ]);
 
         $ews = EwsRecord::create([
@@ -34,6 +36,7 @@ class DashboardController extends Controller
             'score_5' => $request->score_5,
             'score_6' => $request->score_6,
             'user_id' => auth()->user()->id,
+            'note' => $request->note,
         ]);
 
         return redirect()->route('dashboard')->with('success', 'EWS record created successfully')->with('ews', $ews);

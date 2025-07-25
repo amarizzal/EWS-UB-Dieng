@@ -262,6 +262,15 @@
                       <label class="custom-control-label" for="score_6_5">>= 96</label>
                     </div>
                   </div>
+
+                  <div class="form-group col-md-12">
+                    <label for="note">Catatan</label>
+                    <textarea name="note" class="form-control" id="note" placeholder="catatan" required @if(session('ews')) readonly @endif>
+                      @if(session('ews'))
+                        {{ session('ews')->note }}
+                      @endif
+                    </textarea>
+                  </div>
                 </div>
 
                 @if(session('ews'))

@@ -92,6 +92,7 @@
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama, No. Rekam Medis, Ruang Dirawat</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Total Skor</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Pelapor</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Catatan</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Pernapasan</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Denyut Jantung</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tekanan Sistolik</th>
@@ -149,6 +150,15 @@
                           <div class="d-flex flex-column ms-3">
                             <span class="text-secondary text-sm font-weight-bold">{{ $ewsRecord->user->name }}</span>
                           </div>
+                        </td>
+                        <td class="align-middle text-center">
+                          @if($ewsRecord->note)
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#note{{ $ewsRecord->id }}">
+                              <i class="ni ni-single-copy-04"></i>
+                            </button>
+                          @else
+                            <span class="text-secondary text-sm font-weight-bold">-</span>
+                          @endif
                         </td>
                         <td>
                           <div class="d-flex px-0 py-1">
@@ -315,6 +325,35 @@
           </div>
         </div>
       </div>
+
+      {{-- MODAL Catatan --}}
+      @foreach($ewsRecords as $ewsRecord)
+      @if($ewsRecord->note)
+      <div class="modal fade" id="note{{ $ewsRecord->id }}" tabindex="-1" role="dialog" aria-labelledby="noteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <div class="card card-plain">
+                <div class="card-header pb-0 text-left">
+                    <h5 class="font-weight-bolder text-success">Catatan</h5>
+                </div>
+                <div class="card-body pb-3">
+                  <div class="row">
+                    <div class="col-12">
+                      <p class="mb-0">{!! nl2br(e($ewsRecord->note)) !!}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      @endif
+      @endforeach
 
       {{-- MODAL Tata laksana - HIJAU --}}
       <div class="modal fade" id="hijau" tabindex="-1" role="dialog" aria-labelledby="hijauModalLabel" aria-hidden="true">
