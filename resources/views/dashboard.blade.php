@@ -305,6 +305,9 @@
                           <li>
                             <p class="mb-0">Pemantauan tanda vital setiap 6 jam</p>
                           </li>
+                          <li>
+                            <p class="mb-0">Lakukan re-assessment setelah 6 jam pemantauan </p>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -324,6 +327,9 @@
                           <li>
                             <p class="mb-0">Perawat melapor ke dokter jaga</p>
                           </li>
+                          <li>
+                            <p class="mb-0">Lakukan re-assessment setelah 2 jam pemantauan</p>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -338,13 +344,19 @@
                       <div class="col-12">
                         <ul>
                           <li>
-                            <p class="mb-0">Pantau TTV setiap 1 jam</p>
+                            <p class="mb-0">Pantau tanda vital setiap 1 jam</p>
                           </li>
                           <li>
                             <p class="mb-0">Perawat melapor ke dokter jaga</p>
                           </li>
                           <li>
                             <p class="mb-0">Dokter jaga lapor ke DPJP</p>
+                          </li>
+                          <li>
+                            <p class="mb-0">⁠Lakukan re-assessment setelah 1 jam pemantauan</p>
+                          </li>
+                          <li>
+                            <p class="mb-0">Siapkan monitor dan usulkan pasien masuk ruang intensif (jika diperlukan)</p>
                           </li>
                         </ul>
                       </div>
@@ -360,16 +372,22 @@
                       <div class="col-12">
                         <ul>
                           <li>
-                            <p class="mb-0">Pantau TTV setiap 1/2 jam</p>
+                            <p class="mb-0">Pantau tanda vital setiap 30 menit</p>
                           </li>
                           <li>
-                            <p class="mb-0">Perawat melapor ke dokter jaga</p>
+                            <p class="mb-0">⁠⁠Lakukan re-assessment setelah 30 menit pemantauan</p>
+                          </li>
+                          <li>
+                            <p class="mb-0">Dokter jaga memberi informasi kepada keluarga tentang kondisi pasien</p>
                           </li>
                           <li>
                             <p class="mb-0">Dokter jaga lapor ke DPJP</p>
                           </li>
                           <li>
                             <p class="mb-0">Dokter jaga atau DPJP konsul intensivist</p>
+                          </li>
+                          <li>
+                            <p class="mb-0">Jika terjadi Cardiac Arrest, lakukan penanganan sesuai algoritma code blue</p>
                           </li>
                         </ul>
                       </div>

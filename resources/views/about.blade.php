@@ -88,7 +88,7 @@
           <div class="col-lg-5 text-center mx-auto">
             <h1 class="text-white mb-2 mt-5">EWS RSSA FIKES UB</h1>
             <h4 class="text-white position-relative">"Ruang Bunaken"</h4>
-            <p class="text-lead text-white mt-4">Project EWS RSSA FIKES UB dibangun untuk memudahkan pengguna dalam merekam data EWS pasien. Project ini dikembangkan oleh Tim RSSA UB di bawah ini.</p>
+            <p class="text-lead text-white mt-4">Project EWS RSSA FIKES UB dibangun untuk memudahkan pengguna dalam merekam data EWS pasien. Project ini dikembangkan oleh Kelompok 6A dan 6B pada Stase Manajemen Keperawatan Program Studi Profesi Ners 2025 Departemen Keperawatan Fakultas Ilmu Kesehatan Universitas Brawijaya</p>
           </div>
         </div>
       </div>
