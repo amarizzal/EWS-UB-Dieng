@@ -178,7 +178,7 @@
                       <label class="custom-control-label" for="score_3_4">101 - 159</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="score_3" id="score_3_5" value="1" @if(session('ews')) {{ session('ews')->score_3 == 1 ? 'checked' : '' }} @endif>
+                      <input class="form-check-input" type="radio" name="score_3" id="score_3_5" value="-1" @if(session('ews')) {{ session('ews')->score_3 == -1 ? 'checked' : '' }} @endif>
                       <label class="custom-control-label" for="score_3_5">160 - 199</label>
                     </div>
                     <div class="form-check">
